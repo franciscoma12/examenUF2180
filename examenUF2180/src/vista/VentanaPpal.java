@@ -31,7 +31,7 @@ public class VentanaPpal extends JFrame {
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		contentPane.setLayout(new MigLayout("", "[grow][][grow][][grow]", "[grow][grow][grow]"));
+		contentPane.setLayout(new MigLayout("", "[grow][][20.00,grow][][grow]", "[grow][grow][grow]"));
 		
 		JPanel panel = new JPanel();
 		panel.setFont(new Font("Tahoma", Font.PLAIN, 14));
@@ -66,12 +66,12 @@ public class VentanaPpal extends JFrame {
 		contentPane.add(panel_1, "cell 3 1,grow");
 		panel_1.setLayout(new MigLayout("", "[]", "[::100px,grow][36.00,grow][::100px,grow]"));
 		
-		JButton btnNewButton_2 = new JButton("Ver Empleados");
+		JButton btnNewButton_2 = new JButton("Ver Departamentos");
 		btnNewButton_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		panel_1.add(btnNewButton_2, "cell 0 0,grow");
 		btnNewButton_2.setIcon(new ImageIcon(VentanaPpal.class.getResource("/images/tabla32.png")));
 		
-		JButton btnNewButton_3 = new JButton("Nuevo Empleado");
+		JButton btnNewButton_3 = new JButton("Nuevo Departamento ");
 		btnNewButton_3.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		panel_1.add(btnNewButton_3, "cell 0 2,growy");
 		btnNewButton_3.setIcon(new ImageIcon(VentanaPpal.class.getResource("/images/a\u00F1adir32.png")));
