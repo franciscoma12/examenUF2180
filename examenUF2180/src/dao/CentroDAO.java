@@ -135,66 +135,6 @@ public class CentroDAO {
 		}
 		return resultado;
     }
-
-    public int actualizarAutor(Centro centro) {
-    	// Obtenemos una conexion a la base de datos.
-		Connection con = conexion.getConexion();
-		PreparedStatement consulta = null;
-		int resultado=0;
-		
-		try {
-			consulta = con.prepareStatement("UPDATE centros \r\n"
-					+ "SET nombre = ?, direccion = ?\r\n"
-					+ "WHERE cod_centro = ?;");
-			
-			consulta.setString(1, centro.getNombre());
-			consulta.setString(2, centro.getDireccion());
-			consulta.setInt(3, centro.getCod_centro());
-			resultado=consulta.executeUpdate();
-
-		} catch (SQLException e) {
-			System.out.println("Error al realizar la actualizacion de centros: "
-					+e.getMessage());
-		} finally {
-			try {
-				consulta.close();
-				conexion.desconectar();
-			} catch (SQLException e) {
-				System.out.println("Error al liberar recursos: "+e.getMessage());
-			} catch (Exception e) {
-				
-			}
-		}
-		return resultado;
-    }
-
-
-    public int eliminarAutores(Centro centro) {
-    	// Obtenemos una conexion a la base de datos.
-		Connection con = conexion.getConexion();
-		PreparedStatement consulta = null;
-		int resultado=0;
-		
-		try {
-			consulta = con.prepareStatement("DELETE FROM centros\r\n"
-					+ "WHERE cod_centro = ?");
-			
-			consulta.setInt(1, centro.getCod_centro());
-			resultado=consulta.executeUpdate();
-
-		} catch (SQLException e) {
-			System.out.println("Error al realizar el borrado de Centros: "+e.getMessage());
-		} finally {
-			try {
-				consulta.close();
-				conexion.desconectar();
-			} catch (SQLException e) {
-				System.out.println("Error al liberar recursos: "+e.getMessage());
-			} catch (Exception e) {
-				
-			}
-		}
-		return resultado;
-    }
-
 }
+
+   
