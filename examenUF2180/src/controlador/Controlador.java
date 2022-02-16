@@ -70,7 +70,7 @@ public class Controlador {
 	 */
 	public void insertaCentro(Centro centro) {
 		// Invocando a centroDAO
-		int resultado = centroDAO.insertarAutor(centro);
+		int resultado = centroDAO.insertarCentro(centro);
 		if (resultado ==0) {
 			JOptionPane.showMessageDialog(dialogoAñadirCentro, "Error. no se ha podido insertar.");
 		} else {

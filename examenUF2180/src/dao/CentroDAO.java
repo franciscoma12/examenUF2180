@@ -104,7 +104,7 @@ public class CentroDAO {
     }
 
 
-    public int insertarAutor(Centro centro) {
+    public int insertarCentro(Centro centro) {
     	// Obtenemos una conexion a la base de datos.
 		Connection con = conexion.getConexion();
 		PreparedStatement consulta = null;
